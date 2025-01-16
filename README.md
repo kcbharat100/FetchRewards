@@ -1,138 +1,93 @@
-FetchRewards Android App
+# FetchRewards Android App
 
-Overview
-
+## Overview
 FetchRewards is an Android application designed to display and manage rewards data fetched from a remote API. Built with Kotlin, the app follows the MVVM architecture and Clean Architecture principles for a robust, maintainable, and testable codebase.
 
-Features
+## Features
+- Fetch and display a list of rewards from an API.
+- Group, filter, and sort rewards data for better user experience.
+- Modern UI using Jetpack Compose.
+- Dependency injection with Hilt.
+- Offline error handling and loading states.
+- Reactive data streams using Kotlin Flow.
 
-Fetch and display a list of rewards from an API.
-
-Group, filter, and sort rewards data for better user experience.
-
-Modern UI using Jetpack Compose.
-
-Dependency injection with Hilt.
-
-Offline error handling and loading states.
-
-Reactive data streams using Kotlin Flow.
-
-Project Structure
-
+## Project Structure
 The app is organized into the following layers:
 
-1. Data Layer
+### 1. **Data Layer**
+- **`data/mappers`**: Handles transformations between DTOs and domain models.
+- **`data/model`**: Defines data transfer objects (DTOs).
+- **`data/remote`**: Contains API service definitions.
+- **`data/repository`**: Implements repository interfaces.
 
-data/mappers: Handles transformations between DTOs and domain models.
+### 2. **Domain Layer**
+- **`domain/model`**: Defines domain entities.
+- **`domain/repository`**: Contains repository interfaces.
+- **`domain/use_case`**: Encapsulates business logic.
 
-data/model: Defines data transfer objects (DTOs).
+### 3. **Presentation Layer**
+- **`presentation/ui`**: Contains UI components, screens, and states.
+- **`presentation/viewmodel`**: Handles UI-related data using the `RewardViewModel`.
 
-data/remote: Contains API service definitions.
+### 4. **Common Utilities**
+- **`utils`**: Provides utility classes like `Resource` for handling success/error states.
 
-data/repository: Implements repository interfaces.
+## Key Components
 
-2. Domain Layer
+### Technologies Used
+- **Kotlin**: Programming language.
+- **Jetpack Compose**: For building modern UI.
+- **Hilt**: Dependency injection framework.
+- **Retrofit**: For network calls.
+- **MVVM**: Architectural pattern.
+- **Coroutines**: For asynchronous programming.
+- **Flow**: For managing reactive data streams.
 
-domain/model: Defines domain entities.
+### Important Files
+- `FetchRewardApplication.kt`: Application class.
+- `ApiService.kt`: API interface for network communication.
+- `RewardViewModel.kt`: ViewModel for managing UI state.
+- `RewardScreen.kt`: Compose UI for displaying rewards.
 
-domain/repository: Contains repository interfaces.
+## Setup Instructions
 
-domain/use_case: Encapsulates business logic.
+### Prerequisites
+- Android Studio Electric Eel or later.
+- JDK 11 or higher.
+- Internet connection to fetch dependencies.
 
-3. Presentation Layer
+### Steps
+1. Clone this repository:
+   ```bash
+   git clone https://github.com/your-username/FetchRewards.git
+   ```
+2. Open the project in Android Studio.
+3. Sync the Gradle files.
+4. Run the app on an emulator or a physical device.
 
-presentation/ui: Contains UI components, screens, and states.
+## Configuration
+- **API Base URL**: Configure the API endpoint in `NetworkModule.kt`.
+- **ProGuard Rules**: Modify `proguard-rules.pro` for release builds.
 
-presentation/viewmodel: Handles UI-related data using the RewardViewModel.
-
-4. Common Utilities
-
-utils: Provides utility classes like Resource for handling success/error states.
-
-Key Components
-
-Technologies Used
-
-Kotlin: Programming language.
-
-Jetpack Compose: For building modern UI.
-
-Hilt: Dependency injection framework.
-
-Retrofit: For network calls.
-
-MVVM: Architectural pattern.
-
-Coroutines: For asynchronous programming.
-
-Flow: For managing reactive data streams.
-
-Important Files
-
-FetchRewardApplication.kt: Application class.
-
-ApiService.kt: API interface for network communication.
-
-RewardViewModel.kt: ViewModel for managing UI state.
-
-RewardScreen.kt: Compose UI for displaying rewards.
-
-Setup Instructions
-
-Prerequisites
-
-Android Studio Electric Eel or later.
-
-JDK 11 or higher.
-
-Internet connection to fetch dependencies.
-
-Steps
-
-Clone this repository:
-
-git clone https://github.com/your-username/FetchRewards.git
-
-Open the project in Android Studio.
-
-Sync the Gradle files.
-
-Run the app on an emulator or a physical device.
-
-Configuration
-
-API Base URL: Configure the API endpoint in NetworkModule.kt.
-
-ProGuard Rules: Modify proguard-rules.pro for release builds.
-
-Testing
-
-Unit Tests: Located in src/test.
-
-Instrumentation Tests: Located in src/androidTest.
+## Testing
+- **Unit Tests**: Located in `src/test`.
+- **Instrumentation Tests**: Located in `src/androidTest`.
 
 Run tests using:
-
+```bash
 ./gradlew test
 ./gradlew connectedAndroidTest
+```
 
-Contributing
-
+## Contributing
 Contributions are welcome! Please follow these steps:
+1. Fork the repository.
+2. Create a new branch for your feature.
+3. Commit your changes.
+4. Submit a pull request.
 
-Fork the repository.
-
-Create a new branch for your feature.
-
-Commit your changes.
-
-Submit a pull request.
-
-License
-
+## License
 This project is licensed under the MIT License.
 
-Contact
-
+## Contact
 For questions or suggestions, feel free to open an issue or reach out at [your-email@example.com].
