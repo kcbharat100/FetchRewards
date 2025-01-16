@@ -50,8 +50,8 @@ The app is organized into the following layers:
 - `RewardScreen.kt`: Compose UI for displaying rewards.
 
 ## Screenshots
-![App Screenshot 1](screenshots/screenshot1.png)
-![App Screenshot 2](screenshots/screenshot2.png)
+![App Screenshot 1](screen_shot1.PNG)
+![App Screenshot 2](screen_shot2.PNG)
 
 
 ## Setup Instructions
