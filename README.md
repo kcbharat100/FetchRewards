@@ -8,7 +8,7 @@ FetchRewards is an Android application designed to display and manage rewards da
 - Group, filter, and sort rewards data for better user experience.
 - Modern UI using Jetpack Compose.
 - Dependency injection with Hilt.
-- Offline error handling and loading states.
+- Error handling and loading states.
 - Reactive data streams using Kotlin Flow.
 
 ## Project Structure
@@ -49,6 +49,11 @@ The app is organized into the following layers:
 - `RewardViewModel.kt`: ViewModel for managing UI state.
 - `RewardScreen.kt`: Compose UI for displaying rewards.
 
+## Screenshots
+![App Screenshot 1](screenshots/screenshot1.png)
+![App Screenshot 2](screenshots/screenshot2.png)
+
+
 ## Setup Instructions
 
 ### Prerequisites
@@ -59,7 +64,7 @@ The app is organized into the following layers:
 ### Steps
 1. Clone this repository:
    ```bash
-   git clone https://github.com/your-username/FetchRewards.git
+   git clone https://github.com/kcbharat100/FetchRewards.git
    ```
 2. Open the project in Android Studio.
 3. Sync the Gradle files.
@@ -70,24 +75,5 @@ The app is organized into the following layers:
 - **ProGuard Rules**: Modify `proguard-rules.pro` for release builds.
 
 ## Testing
-- **Unit Tests**: Located in `src/test`.
-- **Instrumentation Tests**: Located in `src/androidTest`.
-
-Run tests using:
-```bash
-./gradlew test
-./gradlew connectedAndroidTest
-```
-
-## Contributing
-Contributions are welcome! Please follow these steps:
-1. Fork the repository.
-2. Create a new branch for your feature.
-3. Commit your changes.
-4. Submit a pull request.
-
-## License
-This project is licensed under the MIT License.
-
-## Contact
-For questions or suggestions, feel free to open an issue or reach out at [your-email@example.com].
+- **Unit Tests**: not done
+- **Instrumentation Tests**: not done
