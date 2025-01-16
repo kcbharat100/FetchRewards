@@ -75,5 +75,5 @@ The app is organized into the following layers:
 - **ProGuard Rules**: Modify `proguard-rules.pro` for release builds.
 
 ## Testing
-- **Unit Tests**: not done
-- **Instrumentation Tests**: not done
+- **Unit Tests**: todo
+- **Instrumentation Tests**: todo
