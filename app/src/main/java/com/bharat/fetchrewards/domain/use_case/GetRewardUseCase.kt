@@ -21,14 +21,21 @@ class GetRewardUseCase @Inject constructor(
                 }
 
                 is Resource.Success -> {
+
                    // Filter out rewards with null or empty names
-                    val filteredData = resource.data?.filter { !it.name.isNullOrBlank() }
-                    // Sort the data by listId and name
-                    val sortedData = filteredData?.sortedWith(compareBy({ it.listId }, { it.name }))
-                    // Group the data by listId
-                    val groupedRewards  = sortedData?.groupBy { it.listId }!!
-                    // Return the grouped data
-                    Resource.Success(groupedRewards)
+                    val filteredData = resource.data.filter { !it.name.isNullOrBlank() }
+
+                    // Group the data by listId and sort it
+                    val sortedGroupedDataById  = filteredData.groupBy { it.listId }.toSortedMap()
+
+                    //Sort the grouped data by name
+                    val sortedGroupedDataByName = sortedGroupedDataById.mapValues { (_, rewardsList) ->
+                        rewardsList.sortedBy { it.name?.filter { char -> char.isDigit()}?.toInt() }
+                    }
+
+                    // Return final data
+                    Resource.Success(sortedGroupedDataByName)
+
                 }
 
                 is Resource.Error -> {

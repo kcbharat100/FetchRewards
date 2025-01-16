@@ -2,9 +2,9 @@ plugins {
     alias(libs.plugins.android.application)
     alias(libs.plugins.kotlin.android)
     alias(libs.plugins.kotlin.compose)
+    alias(libs.plugins.kotlin.kapt)
+    alias(libs.plugins.hilt.android)
 
-    id("kotlin-kapt")
-    id("com.google.dagger.hilt.android")
 }
 
 android {
@@ -63,19 +63,15 @@ dependencies {
     implementation(libs.androidx.material3)
 
     //hilt
-    implementation("com.google.dagger:hilt-android:2.51.1")
-    kapt("com.google.dagger:hilt-android-compiler:2.51.1")
+    implementation(libs.hilt.android)
+    kapt(libs.hilt.android.compiler)
+    //hilt navigation compose
+    implementation(libs.hilt.navigation.compose)
 
     //retrofit
-    implementation("com.squareup.retrofit2:retrofit:2.11.0")
+    implementation(libs.retrofit)
     //gson converter
-    implementation("com.squareup.retrofit2:converter-gson:2.11.0")
-
-    //hilt navigation compose
-    implementation("androidx.hilt:hilt-navigation-compose:1.2.0")
-
-//    implementation("org.jetbrains.kotlinx:kotlinx-coroutines-android:1.7.3")
-//    implementation("androidx.lifecycle:lifecycle-viewmodel-ktx:2.4.0")
+    implementation(libs.converter.gson)
 
 
     testImplementation(libs.junit)
