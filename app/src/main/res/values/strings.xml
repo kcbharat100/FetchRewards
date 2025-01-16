@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">Fetch Rewards</string>
+    <string name="error_no_rewards">No rewards available</string>
+    <string name="error_network">Network error occurred. Please check your connection.</string>
+    <string name="error_http">HTTP error occurred: %1$s</string>
+<!--    <string name="error_http">HTTP error occurred: %1$d - %2$s</string>-->
+    <string name="error_unexpected">Unexpected error: %1$s</string>
+    <string name="error_unknown">An unknown error occurred.</string>
+    <string name="list_id">ListId: %1$d</string>
+    <string name="show_more">Show More</string>
+    <string name="show_less">Show Less</string>
+    <string name="reward_name">Name: %1$s</string>
+    <string name="unknown">Unknown</string>
+</resources>
